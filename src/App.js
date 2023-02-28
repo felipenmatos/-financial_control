@@ -9,8 +9,8 @@ function Login() {
         <LogoImage src={Logo} />
         <Form>
           <Title>Login</Title>
-          <InputLogin />
-          <InputPassword />
+          <InputLogin placeholder="Login" />
+          <InputPassword type="password" placeholder="Password" />
           <Row>
             <Text>Ainda não possui cadastro?</Text>
             <Link>Cadastre-se</Link>
@@ -51,20 +51,66 @@ const ContainerImage = styled.div`
 
 const LogoImage = styled.img``;
 
-const Form = styled.form``;
+const Form = styled.form`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  font-size: 24px;
+`;
 
-const InputLogin = styled.input``;
+const InputLogin = styled.input`
+  width: 300px;
+  height: 40px;
+  border: 1px solid #ff7a00;
+  border-radius: 10px;
+  outline: none;
+  padding: 0px 5px;
+  text-align: center;
+  color: #939393;
+`;
 
-const InputPassword = styled.input``;
+const InputPassword = styled.input`
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  border: 1px solid #ff7a00;
+  border-radius: 10px;
+  outline: none;
+  padding: 0px 5px;
+  text-align: center;
+  color: #939393;
+`;
 
-const Row = styled.div``;
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
 
-const Text = styled.p``;
+const Text = styled.p`
+  font-size: 16px;
+`;
 
-const Link = styled.a``;
+const Link = styled.a`
+  color: #ff7a00;
+  cursor: pointer;
+  margin-left: 5px;
+`;
 
-const Button = styled.button``;
+const Button = styled.button`
+  width: 300px;
+  height: 40px;
+  color: #fff;
+  background-color: #ff7a00;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+`;
 
 export default Login;
