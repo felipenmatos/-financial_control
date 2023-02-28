@@ -1,8 +1,19 @@
 import styled from "styled-components";
 import backgroundLogin from "./assets/BackgroundLogin.png";
 import Logo from "./assets/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  function clickRegister() {
+    navigate("/Register");
+  }
+
+  function clickHome() {
+    navigate("/Home");
+  }
+
   return (
     <ContainerPage>
       <ContainerForm>
@@ -13,9 +24,9 @@ function Login() {
           <InputPassword type="password" placeholder="Password" />
           <Row>
             <Text>Ainda não possui cadastro?</Text>
-            <Link>Cadastre-se</Link>
+            <Link onClick={() => clickRegister()}>Cadastre-se</Link>
           </Row>
-          <Button>Entrar</Button>
+          <Button onClick={() => clickHome()}>Entrar</Button>
         </Form>
       </ContainerForm>
       <ContainerImage />
