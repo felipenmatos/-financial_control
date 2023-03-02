@@ -54,6 +54,16 @@ function Home() {
         </ColumnRegister>
         <ButtonRegister>Registrar</ButtonRegister>
       </ContainerRegister>
+      <ContainerList>
+        <RowList>
+          <Label>Data</Label>
+          <Label>Categoria</Label>
+          <Label>Título</Label>
+          <Label>Valor</Label>
+          <ButtonSelect />
+        </RowList>
+        <List></List>
+      </ContainerList>
     </ContainerPage>
   );
 }
@@ -248,6 +258,37 @@ const ButtonRegister = styled.button`
   border: none;
   border-radius: 10px;
   cursor: pointer;
+`;
+
+const ContainerList = styled.div`
+  margin-top: 20px;
+  width: 920px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f5f5f5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+`;
+
+const RowList = styled.div`
+  width: 92%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+const List = styled.div``;
+
+const ButtonSelect = styled.button`
+  width: 40px;
+  height: 40px;
+
+  background: #ff7a00;
+  border: none;
+  border-radius: 10px;
 `;
 
 export default Home;
